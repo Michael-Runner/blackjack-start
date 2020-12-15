@@ -1,6 +1,4 @@
-package org.itstep;
-
-import org.itstep.blackjack.Card;
+package org.itstep.blackjack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +17,9 @@ public class Hand {
     public int getValue() {
         int value = 0;
         for(Card card: cards) {
-            value += card.getValue();
+            if(!card.isHide()) {
+                value += card.getValue();
+            }
         }
         return value;
     }

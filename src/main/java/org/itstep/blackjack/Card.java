@@ -3,6 +3,7 @@ package org.itstep.blackjack;
 public class Card {
     private final Rank rank;
     private final Suite suite;
+    private boolean hide;
 
     public Card(Rank rank, Suite suite) {
         this.rank = rank;
@@ -19,6 +20,14 @@ public class Card {
 
     public int getValue() {
         return rank.getValue();
+    }
+
+    public boolean isHide() {
+        return hide;
+    }
+
+    public void setHide(boolean hide) {
+        this.hide = hide;
     }
 
     @Override
