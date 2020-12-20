@@ -8,8 +8,8 @@ public class Deck {
     private final List<Card> cards;
     private final List<Card> taken;
 
-    public Deck(List<Card> taken) {
-        this.taken = taken;
+    public Deck() {
+        this.taken = new ArrayList<>();
         this.cards = new ArrayList<>(52);
         for (Suite suite : Suite.values()) {
             for (Rank rank : Rank.values()) {
